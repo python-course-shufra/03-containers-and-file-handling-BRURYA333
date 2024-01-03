@@ -42,11 +42,13 @@ def add_student(name, email=None):
              in lowercase, you can use the `s.lower()` method
     'grade': initialize with empty list
     """
+    return 1
     pass
 
 
 def delete_student(name):
     """Delete a student from the classroom"""
+    return 0
     pass
 
 
