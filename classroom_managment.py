@@ -94,14 +94,4 @@ def get_professions(name):
 
 
 
-"""print(classroom)
-add_student('bbb',)
-
-print(classroom)
-delete_student('Bob')
-print(classroom)
-
-print(avg_grade('Charlie','physics'))
-
-print(get_professions('Alice'))"""
 
