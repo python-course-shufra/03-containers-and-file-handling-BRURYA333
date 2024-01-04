@@ -53,7 +53,7 @@ def delete_student(name):
 def set_email(name, email):
     for student in classroom:
         if student['name']==name:
-            classroom[name].update({'email':email})
+            student['email']=email
     
     
 
