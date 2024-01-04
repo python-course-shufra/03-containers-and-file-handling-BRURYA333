@@ -40,15 +40,14 @@ def add_student(name, email=None):
     new_student={'name':name,'email':email,'grades':[]}
     classroom.append(new_student)
 
-    pass
-
+    
 
 def delete_student(name):
     for student in classroom:
         if student['name'] == name:
             classroom.remove(student)
             break
-    pass
+    
 
 
 def set_email(name, email):
@@ -56,7 +55,7 @@ def set_email(name, email):
         if student['name']==name:
             classroom[name].update({'email':email})
     
-    pass
+    
 
 
 def add_grade(name, profession, grade):
@@ -64,7 +63,7 @@ def add_grade(name, profession, grade):
         if student['name']==name:
             student['grades'].append((profession, grade))
             break
-    pass
+    
 
 
 def avg_grade(name, profession):
@@ -82,7 +81,7 @@ def avg_grade(name, profession):
                 return 0 
     return 0                  
 
-    pass
+    
 
 
 def get_professions(name):
@@ -92,7 +91,6 @@ def get_professions(name):
             return professions
     return []
 
-    pass
 
 
 
