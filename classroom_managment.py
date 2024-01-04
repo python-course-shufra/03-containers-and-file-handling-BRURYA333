@@ -44,28 +44,66 @@ def add_student(name, email=None):
 
 
 def delete_student(name):
-    classroom.remove('name')
-
+    for student in classroom:
+        if student['name'] == name:
+            classroom.remove(student)
+            break
     pass
 
 
 def set_email(name, email):
-    classroom[name].update({'email':email})
+    for student in classroom:
+        if student['name']==name:
+            classroom[name].update({'email':email})
+    
     pass
 
 
 def add_grade(name, profession, grade):
-    """Adds a new grade to the student grades"""
+    for student in classroom:
+        if student['name']==name:
+            student['grades'].append((profession, grade))
+            break
     pass
 
 
 def avg_grade(name, profession):
-    """Returns the average of grades of the student
-    in the specified profession
-    """
+    for student in classroom:
+        if student['name']==name:
+            count = 0
+            total = 0
+            for grade_profession, grade_value in student['grades']:
+                if grade_profession == profession:
+                    count += 1
+                    total += grade_value
+            if count > 0:
+                return total / count
+            else:
+                return 0 
+    return 0                  
+
     pass
 
 
 def get_professions(name):
-    """Returns a list of unique professions that student has grades in"""
+    for student in classroom:
+        if student ['name']== name:
+            professions = [grade_profession[0] for grade_profession in student['grades']]
+            return professions
+    return []
+
     pass
+
+
+
+print(classroom)
+add_student('bbb',)
+
+"""print(classroom)
+delete_student('Bob')
+print(classroom)"""
+
+print(avg_grade('Charlie','physics'))
+
+print(get_professions('Alice'))
+
